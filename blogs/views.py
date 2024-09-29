@@ -8,3 +8,9 @@ def home(request):
         'blogs':posts_list,
     }
     )
+# def detail(request):
+#     post_detail = Blog.objects.all()
+#     return render(request, 'detail.html',{
+#                   "object":post_detail,
+#                   }
+#     )            

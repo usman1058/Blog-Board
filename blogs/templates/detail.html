@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title>Blog board</title>
+{% endblock title %}
+{% block content %}
+<h1>Blog Board</h1>
+<div class="blog-posts">
+    <h2>{{ object.title }}</h2>
+<p>{{ object.body }}</p>
+</div>
+{% endblock content %}
