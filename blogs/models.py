@@ -11,6 +11,7 @@ class Blog(models.Model):
     # auther = models.ForeignKey("auth.user")  # ANOTHER WAY TO ADD A FOREGIN KEY PARAMETER
     title = models.CharField(max_length=200)
     content = models.TextField()  # Ensure this is defined
-    
+    def  __str__(self):
+       return self.title
 
 # Create your models here.

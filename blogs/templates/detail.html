@@ -3,9 +3,11 @@
 <title>Blog board</title>
 {% endblock title %}
 {% block content %}
-<h1>Blog Board</h1>
-<div class="blog-posts">
-    <h2>{{ object.title }}</h2>
-<p>{{ object.body }}</p>
+<div class="container">
+    <!-- Content here -->
+ <div class="blog-posts"></div>
+    <h1>{{ object.title }}</h1>
+<p>{{ object.content }}</p>
+</div> 
 </div>
 {% endblock content %}
