@@ -24,7 +24,7 @@
                 <div class="post-meta">
                     <span>Posted by <a href="#">{{ blog.author }}</a> on <time datetime="2022-01-01">January 1,
                             2022</time></span>
-                    <span><a href="{% url 'detail' blog_id=object.id  %}">Read More</a></span>
+                    <span><a href="{% url 'post_detail' blog_id=blog.id %}">Read More</a></span>
                 </div>
             </div>
             {% endfor %}
