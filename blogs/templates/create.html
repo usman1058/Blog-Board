@@ -1,0 +1,39 @@
+
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}
+<title>form</title>
+{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/create.css' %}">
+{% endblock style %}
+{% block content %}
+<div class="container">
+    <div class="form-container">
+        <h2>Create your blog</h2>
+        <form action="{% url 'createView' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <i class="fas fa-comment"></i>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+  
+
+{% endblock content %}

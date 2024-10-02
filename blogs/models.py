@@ -1,4 +1,4 @@
-
+from django.urls import reverse
 from django.db import models
 # from core import settings      # another way to call  settings.py
 from  django.conf import settings
@@ -13,5 +13,7 @@ class Blog(models.Model):
     content = models.TextField()  # Ensure this is defined
     def  __str__(self):
        return self.title
+    def get_absolute_url(self):
+        return reverse("post_detail",kwargs={"blog_id" : self.id})
 
 # Create your models here.
