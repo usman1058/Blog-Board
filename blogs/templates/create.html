@@ -11,11 +11,21 @@
 <div class="container">
     <div class="form-container">
         <h2>Create your blog</h2>
-        <form action="{% url 'createView' %}" method="post">
+        <form action="" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-        
-            <div class="form-group">
+ 
+            <input type="submit" value="save">
+        </form>
+    </div>
+</div>
+  
+
+{% endblock content %}
+
+
+
+            <!-- <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 <i class="fas fa-user"></i>
@@ -29,11 +39,4 @@
                 <label for="comment">Comment:</label>
                 <textarea id="comment" name="comment" required></textarea>
                 <i class="fas fa-comment"></i>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</div>
-  
-
-{% endblock content %}
+            </div>-->
