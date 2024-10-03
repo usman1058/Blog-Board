@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import Blog
 from .forms import CreateBlogForm
 
@@ -18,7 +18,17 @@ def detail(request,blog_id):
                   }
     )            
 def createView(request):
-    form = CreateBlogForm()
+    if request.method == 'POST':
+         form = CreateBlogForm(request.POST)
+         if form.is_valid():
+             form_obj = form.save(commit=False)
+             form_obj.author = request.user
+             form_obj.save()
+             return redirect(form_obj.get_absolute_url())
+    else:
+        print(2)
+        form = CreateBlogForm()
+
     return render(request,"create.html",{
         "form":form
     })
