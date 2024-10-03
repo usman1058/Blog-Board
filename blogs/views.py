@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from .models import Blog
 from .forms import CreateBlogForm
 
-# Create your views here.
+# Create your views her
 def home(request):
     posts_list = Blog.objects.all()
     return render(request, 'index.html',{
