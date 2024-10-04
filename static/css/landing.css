@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 800px;
     margin: 40px auto;
     padding: 20px;
     background-color: #fff;
@@ -15,35 +15,27 @@ body {
     position: relative;
 }
 
-.login-form {
+.welcome-message {
     text-align: center;
-    z-index: 1;
-    position: relative;
+    margin-bottom: 40px;
 }
 
-h2 {
+h1 {
     margin-top: 0;
     font-weight: bold;
     color: #333;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
+p {
     font-size: 18px;
     color: #666;
 }
 
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.call-to-action {
+    text-align: center;
 }
 
-input[type="submit"] {
+button {
     background-color: #4CAF50;
     color: #fff;
     padding: 10px 20px;
@@ -54,25 +46,13 @@ input[type="submit"] {
     font-weight: bold;
 }
 
-input[type="submit"]:hover {
+button:hover {
     background-color: #3e8e41;
 }
-
-p {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #666;
-}
-
-a {
+button a{
     text-decoration: none;
-    color: #337ab7;
+    color: #ddd;
 }
-
-a:hover {
-    color: #23527c;
-}
-
 .background {
     position: absolute;
     top: 0;

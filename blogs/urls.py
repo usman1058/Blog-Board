@@ -3,9 +3,9 @@ from blogs.views import home,detail,createView,BlogUpdateView,landing
 
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('home', home, name='home'),
      path("details/<int:blog_id>/", detail, name="post_detail"),
      path("form",createView,name="createView"),
      path("post/<int:pk>/edit/", BlogUpdateView, name="post_edit"),
-    path('home', landing, name='landing'),
+    path('', landing, name='landing'),
 ]

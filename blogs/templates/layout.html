@@ -43,10 +43,16 @@
 
                 </ul>
                 <div class="deflex">
+                  {% if user.is_authenticated %}
+                  <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <input class="btn btn-primary" type="submit" value="log out">
+                  </form>
+                  {% else %}
                   <a class="btn btn-outline-primary" href="{% url 'login' %}">login</a>
                   <a class="btn btn-primary" href="" >Sign in</a>
+                  {% endif %}
                  </div>
-
               </div>
             </div>
           </nav>
