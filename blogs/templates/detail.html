@@ -11,8 +11,13 @@
     <!-- Content here -->
  <div class="blog-posts"></div>
     <h1>{{ object.title }}</h1>
+    <h4> Posted by : {{ object.author.username }}</h4>
 <p>{{ object.content }}</p>
+<div class="deflex">
+    <a class="btn btn-primary" href="{% url 'login' %}">Updates</a>
+    <a class="btn btn-outline-primary" href="" >Delete</a>
+ </div>
 </div> 
-<!-- <a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a> -->
 </div>
 {% endblock content %}
+<!-- <a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a> -->

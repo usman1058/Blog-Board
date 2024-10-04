@@ -16,7 +16,10 @@ def detail(request,blog_id):
     return render(request, 'detail.html',{
                   "object":post_detail,
                   }
-    )            
+    ) 
+def landing(request):
+    return render(request, 'landing.html'
+    )           
 def createView(request):
     if request.method == 'POST':
          form = CreateBlogForm(request.POST)
