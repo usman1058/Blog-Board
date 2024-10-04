@@ -26,9 +26,17 @@ def createView(request):
              form_obj.save()
              return redirect(form_obj.get_absolute_url())
     else:
-        print(2)
         form = CreateBlogForm()
 
     return render(request,"create.html",{
         "form":form
     })
+def  BlogUpdateView(request):
+    update = CreateBlogForm
+    return render(request,"create.html",{
+        "update":update
+    })
+
+
+
+
