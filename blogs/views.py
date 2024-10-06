@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from .models import Blog
 from .forms import CreateBlogForm
 
@@ -34,12 +34,7 @@ def createView(request):
     return render(request,"create.html",{
         "form":form
     })
-def  BlogUpdateView(request):
-    update = CreateBlogForm
-    return render(request,"create.html",{
-        "update":update
-    })
-
-
-
+def update_post(request, post_id):
+    post = get_object_or_404(Blog, id=post_id)
+    return render(request, 'post_detail.html', {'post': post})
 
