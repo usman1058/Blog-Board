@@ -15,11 +15,11 @@ class Blog(models.Model):
     def get_absolute_url(self):
         return reverse("post_detail",kwargs={"blog_id" : self.id})
     
-    def get_update_url(self):
-        return reverse("update_post",kwargs={"post_id" : self.id})
+    # def get_update_url(self):
+    #     return reverse("update_post",kwargs={"post_id" : self.id})
     
-    def get_delete_url(self):
-        return reverse("delete_item",kwargs={"item_id" : self.id})
+    # def get_delete_url(self):
+    #     return reverse("delete_item",kwargs={"item_id" : self.id})
     
 # Create your models here.
      # auther = models.ForeignKey(User)  # ANOTHER WAY TO ADD A FOREGIN KEY PARAMETER

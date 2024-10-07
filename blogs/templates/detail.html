@@ -13,11 +13,11 @@
     <h1>{{ object.title }}</h1>
     <h4> Posted by : {{ object.author.username }}</h4>
 <p>{{ object.content }}</p>
-<p>Post ID: {{ post.id }}</p>  <!-- Add this line to see the post ID -->
+<p>Post ID: {{object.id }}</p>  <!-- Add this line to see the post ID -->
 
 <div class="deflex">
-    <a class="btn btn-primary" href="{{ post.get_update_url }}">Updates</a>
-    <a class="btn btn-outline-primary" href="{{ item.get_delete_url }}" >Delete</a>
+    <a class="btn btn-primary" href="{% url 'update_post' post_id=object.id %}">Updates</a>
+    <a class="btn btn-outline-primary" href="{% url 'delete_item' item_id=object.id %}" >Delete</a>
  </div>
 </div> 
 </div>

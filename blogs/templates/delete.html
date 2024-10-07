@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>Are you sure you want to delete "{{ item.name }}"?</h1>
+<h1>Are you sure you want to delete "{{ item.title }}"?</h1>
+
 <form method="post">
     {% csrf_token %}
-    <button type="submit">Confirm Delete</button>
+    <button class="btn btn-outline-primary" type="submit">Confirm Delete</button>
 </form>
-<a href="{{ blog.get_absolute_url }}">Cancel</a> 
+<a class="btn btn-outline-primary" href="{{ item.get_absolute_url }}">Cancel</a> 
 {% endblock content %}
