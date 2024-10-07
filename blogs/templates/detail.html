@@ -16,8 +16,8 @@
 <p>Post ID: {{ post.id }}</p>  <!-- Add this line to see the post ID -->
 
 <div class="deflex">
-    <a class="btn btn-primary" href="{{ form.get_update_url }}">Updates</a>
-    <a class="btn btn-outline-primary" href="" >Delete</a>
+    <a class="btn btn-primary" href="{{ post.get_update_url }}">Updates</a>
+    <a class="btn btn-outline-primary" href="{{ item.get_delete_url }}" >Delete</a>
  </div>
 </div> 
 </div>

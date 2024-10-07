@@ -38,3 +38,10 @@ def update_post(request, post_id):
     post = get_object_or_404(Blog, id=post_id)
     return render(request, 'post_detail.html', {'post': post})
 
+def delete_item(request, item_id):
+    item = get_object_or_404(Blog, id=item_id)
+    if request.method == 'POST':
+        item.delete()
+        return redirect('item_list')  # Redirect to your item list page or another appropriate page
+    return render(request, 'delete.html', {'item': item})
+
